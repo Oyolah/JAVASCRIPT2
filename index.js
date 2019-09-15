@@ -1,113 +1,134 @@
-// names of books
-const booksNames = ['things_fall_apart',
-                    'ola_and_the_ball',
-                    'chike_and_river',
-                    'julius_ceaser',
-                    'markbeth', 
-                    'so_long_a_letter',
-                    'dark_side_of_life',
-                    'on_his_blindness',
-                    'jeneba_and_the_road']
-console.log(booksNames)
+//Q1
+const booksNames = [
+                    "things_fall_apart",
+                    "ola_and_the_ball",
+                    "chike_and_river",
+                    "julius_ceaser",
+                    "macbeth", 
+                    "so_long_a_letter",
+                    "long_walk_to_freedom",
+                    "no_long_at_ease",
+                    "the_joys_of_motherhood",
+                    "the_beautiful_ones_are_not_yet_born"
+];
+
+console.log(booksNames);
+
+//Q2 in html
+
 //Q3
+
 function ullifunction() {
+
     const ul = document.createElement('ul');
-    for (let i =0; i<booksNames.length; i++){
-        let li = document.createElement('li');
-        li.innerHTML = booksNames[i];
+
+    for(i = 0 ; i<booksNames.length ; i++){
+        var li = document.createElement('li');
+        li.innerHTML= booksNames[i];
         console.log(booksNames[i]);
         ul.appendChild(li);
     };
-    document.getElementById("namesOfBooks").appendChild(ul);
+    // This is just the list of the books. if uncomment it will display the list of the book on the top of the pages
+
+    //document.getElementById('namesOfBooks').appendChild(ul);
+
 };
 ullifunction();
 
-//4
-
+// Q4
 const informationForEachBook = {
-    ThingsFallApart: {
-        title: "things_fall_apart",
+    things_fall_apart: {
+        title: "Things Fall Apart",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Chinua Achebe",
+        image: src = "images/thingsfallapart.jpg",
     },
-    OlaAndTheBll: {
-        title: "ola_and_the_ball",
+    ola_and_the_ball: {
+        title: "Ola And The Ball",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: " Clifford N. Fyle",
+        image: src = "images/olaandtheball.jpg",
     },
     chike_and_river: {
-        title: "chike_and_river",
+        title: "Chike and the River",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Chinua Achebe",
+        image: src = "images/chikeandtheriver.jpg",
     },
     julius_ceaser: {
-        title: "julius_ceaser",
+        title: "Julius Caesar",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "William Shakespeare",
+        image: src = "images/juliusceaser.jpg",
     },
-    markbeth: {
-        title: "markbeth",
+    macbeth: {
+        title: "Macbeth",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "William Shakespeare",
+        image: src = "images/macbeth.jpg",
     },
     so_long_a_letter: {
-        title: "so_long_a_letter",
+        title: "So Long A Letter",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Mariama Bâ",
+        image: src = "images/solongaletter.jpg",
     },
-    dark_side_of_life: {
-        title: "dark_side_of_life",
+    long_walk_to_freedom: {
+        title: "Long Walk to Freedom",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Nelson Mandela",
+        image: src = "images/longwalktofreedom.jpg",
     },
-    on_his_blindness: {
-        title: "on_his_blindness",
+    no_long_at_ease: {
+        title: "No Longer at Ease",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Chinua Achebe",
+        image: src = "images/nolongatease.jpg",
     },
-    TomorrowIsGood: {
-        title: "tomorrow_is_good",
+    the_joys_of_motherhood: {
+        title: "The Joys of Motherhood",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Buchi Emecheta",
+        image: src = "images/thejoysofmotherhood.jpg",
     },
-    jeneba_and_the_road: {
-        title: "jeneba_and_the_road",
+    the_beautiful_ones_are_not_yet_born: {
+        title: "The Beautyful Ones Are Not Yet Born",
         language: "English",
-        author: "Chinor Achabe",
-        image: src = "LastSupperLeonardoDaVinci.jpg",
+        author: "Ayi Kwei Armah",
+        image: src = "images/thebeautifulonesarenotyetborn.jpg",
     }
-}
+};
 
-//Q5
+//Q5&6
+        function listAndImageLi() {
 
-function dispayBookId() {
-    const ul = document.createElement('ul');
-    for(var i = 0 ; i<booksNames.length ; i++){
-        const li = document.createElement('li');
-        const title = document.createElement('h2');
-        const language = document.createElement('h2');
-        const author = document.createElement('h2');
-        const image = document.createElement('img');
-        li.id = booksNames[i];
-        title.innerHTML = informationForEachBook[booksNames[i]].title;
-        language.innerHTML = informationForEachBook[booksNames[i]].language;
-        author.innerHTML = informationForEachBook[booksNames[i]].author;
-        image.src = informationForEachBook[booksNames[i]].image;
-        li.appendChild(title);
-        li.appendChild(language);
-        li.appendChild(author);
-        li.appendChild(image);
-        ul.appendChild(li)
-    };
-    document.getElementById('namesOfBooks').appendChild(ul);
- };
- dispayBookId();
+            const ul = document.createElement('ul');
+
+            for(i = 0 ; i<booksNames.length ; i++){
+
+                const li = document.createElement('li');
+                const heading = document.createElement('p');
+                const language = document.createElement('p');
+                const author = document.createElement('p');
+                const image = document.createElement('img');
+
+                li.id = booksNames[i];
+
+                heading.innerHTML=informationForEachBook[booksNames[i]].title;
+                language.innerHTML=informationForEachBook[booksNames[i]].language;
+                author.innerHTML=informationForEachBook[booksNames[i]].author;
+                image.src=informationForEachBook[booksNames[i]].image;
+
+                li.appendChild(heading);
+                li.appendChild(language);
+                li.appendChild(author);
+                li.appendChild(image);
+                ul.appendChild(li);
+        
+            
+            };
+            document.getElementById('namesOfBooks').appendChild(ul);
+        
+        };
+        listAndImageLi();
+      
